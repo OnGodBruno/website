@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background with Glassmorphism Effect</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container gradient-background">
+        <div class="rounded-rectangle">
+            <div class="section white-section">
+                <div class="profile-card">
+                    <img src="user.png" alt="User Image" class="user-image"/>
+                    <div class="user-info">
+                        <div class="username">Bruno</div>
+                        <div class="occupation">Graphic Designer</div>
+                    </div>
+                </div>
+
+                <div class="gradient-card">
+                    <i class="fas fa-user"></i>
+                    <div class="gradient-card-text">Profile</div>
+                </div>
+                
+                <div class="category">
+                    <i class="fas fa-rss"></i>
+                    <div class="category-text">News-Feed</div>
+                </div>
+                <div class="category">
+                    <i class="fas fa-chart-bar"></i>
+                    <div class="category-text">Statistics</div>
+                </div>
+                <div class="category">
+                    <i class="fas fa-star"></i>
+                    <div class="category-text">Favorites</div>
+                </div>
+                <div class="category">
+                    <i class="fas fa-cog"></i>
+                    <div class="category-text">Settings</div>
+                </div>
+
+            </div>
+            <div class="section glass-section">
+                <div class="middle-section-content center">
+                    <div class="header-container"> <!-- New container -->
+                        <h1 class="headline">Profile</h1>
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search Setting" />
+                        </div>
+                    </div>
+
+                    <div class="expanded-profile-card">
+                        <img src="user.png" alt="User Image" class="large-user-image"/>
+                        <div class="user-details">
+                            <div class="large-username">Bruno</div>
+                            <div class="user-email">contact@bruno-zoller.com</div>
+                            <div class="user-fullname">Bruno Zoller</div>
+                            <div class="user-birthdate">01.01.2000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-buttons-container">
+                    <div class="card-button glass">Confirm Email</div>
+                    <div class="card-button glass">Reset Password</div>
+                    <div class="card-button glass">Enable Two-Step Authentication</div>
+                    <div class="card-button danger">Delete Account</div>
+                </div>
+
+            </div>
+            <div class="glass-section glass-section2">
+                <div class="chat-header">
+                    <i class="fas fa-arrow-left"></i> <!-- Back or exit icon -->
+                    <img src="user.png" alt="User Image" class="user-image-small"/>
+                    <span class="chat-partner-name">Martha</span>
+                </div>
+            
+                <!-- Chat boxes -->
+                <div class="chat-box">
+                    <div class="chat-message received">
+                        <div class="message-header">You</div>
+                        <p style="margin-top: 0px">Hey there! How's it going?</p>
+                        <span class="timestamp">09:30 AM</span>
+                    </div>
+                    <div class="chat-message sent">
+                        <div class="message-header">Martha</div>
+                        <p style="margin-top: 0px">Hi! I'm doing well, thanks for asking. How about you?</p>
+                        <span class="timestamp">09:32 AM</span>
+                    </div>
+                    <div class="chat-message received">
+                        <div class="message-header">You</div>
+                        <p style="margin-top: 0px">Great to hear. I'm good too, just busy with work.</p>
+                        <span class="timestamp">09:35 AM</span>
+                    </div>
+                </div>
+
+                <div class="write-bar">
+                    <input type="text" placeholder="Message" />
+                </div>
+            </div>
+        </div>
+    </div>
+      
+</body>
+</html>

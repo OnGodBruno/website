@@ -1,0 +1,227 @@
+html {
+  box-sizing: border-box;
+
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #2d2d2d;
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.svg-icon {
+  width: 2em;
+  height: 2em;
+  fill: currentColor;
+}
+
+.app {
+  --app-gap: 3rem;
+  height: 60vh;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--app-gap);
+}
+
+@media (max-width: 600px) {
+  .app {
+    font-size: 12px;
+  }
+}
+
+.disk-container {
+  perspective: 600px;
+}
+
+#song {
+  display: none;
+}
+
+.disk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18em;
+  height: 18em;
+  background-image: url("https://mojtabaseyedi.com/demo/music-player/images/disk3.png");
+  background-size: contain;
+  border-radius: 50%;
+  cursor: pointer;
+  /* pointer-events: none; */
+  box-shadow: 0px 0px 30px 5px #5f5f5f5e;
+  transform: rotateX(60deg);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.disk.focus {
+  /* transform: scale(1.1) rotateX(30deg); */
+}
+
+.innerdisk {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url("https://mojtabaseyedi.com/demo/music-player/images/track.jpg");
+  background-size: contain;
+}
+
+.disk.active {
+  pointer-events: auto;
+}
+
+.timechange {
+  margin-bottom: calc(-1 * var(--app-gap));
+  text-align: center;
+  transform: translateY(-100px) scale(2);
+  opacity: 0;
+  transition: all 0.4s 0.1s ease-in;
+}
+
+.timechange.active {
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: none;
+  opacity: 1;
+}
+
+.song-info {
+
+}
+
+.singer {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: capitalize;
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+.title {
+  flex: 1;
+  --offset: 0;
+  position: relative;
+  display: table;
+  margin: 0.2em auto;
+  text-transform: capitalize;
+  font-size: 4em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: 'PT Serif', serif;
+  font-family: 'Gentium Basic', serif;
+  font-family: 'Gentium Book Basic', serif;
+}
+
+.title::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-border-start: 2px solid currentColor;
+          border-inline-start: 2px solid currentColor;
+  background-color: hsla(30, 8%, 95%, 0.8);
+  transform: translateX(calc(var(--offset)*1px));
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.currenttime {
+
+}
+
+.duration {
+  color: hsl(0, 0%, 78%);
+}
+
+.music-ctrl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 0px 20px hsla(0, 0%, 50%, 0.3))
+}
+
+.music-ctrl button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-ctrl__play {
+  width: 5.4em;
+  height: 5.4em;
+  margin: 0 -1em;
+  border-radius: 50%;
+  background-color: #cfc5ac;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.music-ctrl__play .svg-icon {
+  position: absolute;
+  font-size: 1.5em;
+  transition: .3s opacity;
+}
+
+.music-ctrl__play .svg-icon:last-child {
+  opacity: 0;
+}
+
+.playing .svg-icon:first-child {
+  opacity: 0;
+}
+
+.playing .svg-icon:last-child {
+  opacity: 1;
+}
+
+.music-ctrl__prev,
+.music-ctrl__next {
+  background-color: #f5f5f3;
+  color: #cfc5ac;
+  height: 3em;
+}
+
+.music-ctrl__prev {
+  border-radius: 2em 0 0 2em;
+  padding: 0 2.8em 0 1.5em;
+}
+
+.music-ctrl__next {
+  border-radius: 0 2em 2em 0;
+  padding: 0 1.5em 0 2.8em;
+}
+
+.disk, .music-ctrl__prev, .music-ctrl__play, .music-ctrl__next, .currenttime, .duration {
+  transition: transform 0.3s ease, text-shadow 0.3s ease; /* Transition for scaling and shadow */
+}
+
+.disk:hover, .music-ctrl__prev:hover, .music-ctrl__play:hover, .music-ctrl__next:hover, .currenttime:hover, .duration:hover {
+  transform: scale(1.1); /* Increase text size */
+}

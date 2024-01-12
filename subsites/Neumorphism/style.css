@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #e0e5ec; /* Light background */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  width: 350px;
+  background-color: #e0e5ec; /* Same as background for seamless look */
+  border-radius: 20px;
+  box-shadow: 8px 8px 15px #a3b1c6, /* Outer shadow */
+             -8px -8px 15px #ffffff; /* Inner shadow */
+  padding: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 10px #a3b1c6, /* Smaller shadow for hover */
+             -4px -4px 10px #ffffff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  background-color: #e0e5ec;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 8px #a3b1c6, /* Inset shadow */
+             inset -5px -5px 8px #ffffff; /* Inset light */
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1, h5, .button {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  color: #3B4252; /* Soft text color */
+}
+
+.forget, a {
+  color: #3B4252;
+  text-decoration: none;
+}
+
+.forget {
+  float: right;
+}
+
+.check {
+  margin-top: 1px;
+  float: left;
+}
+
+.button {
+  background-color: #e0e5ec;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 8px #a3b1c6, /* Outer shadow */
+             -5px -5px 8px #ffffff; /* Inner light */
+  color: #3B4252;
+}
+
+.button:hover {
+  background-color: #D1D9E6; /* Slightly darker on hover */
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #2D2D2D; /* Dark background */
+  }
+  
+  body.dark-mode .card,
+  body.dark-mode input,
+  body.dark-mode .button,
+  body.dark-mode .checkbox-container,
+  body.dark-mode .checkmark {
+    background-color: #3B3B3B; /* Dark elements background */
+    color: #E0E5EC; /* Light text color for dark mode */
+  }
+  
+  body.dark-mode .checkmark {
+    border-color: #E0E5EC;
+  }
+  
+  body.dark-mode .button:hover {
+    background-color: #505050; /* Slightly lighter on hover in dark mode */
+  }
+  
+  /* Toggle button styles */
+  .theme-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #e0e5ec;
+    box-shadow: 8px 8px 15px #a3b1c6,
+                -8px -8px 15px #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #D1D9E6;
+  }
+  
+  body.dark-mode .theme-toggle {
+    background-color: #3B3B3B;
+    color: #E0E5EC;
+    box-shadow: 8px 8px 15px #1f1f1f,
+                -8px -8px 15px #555;
+  }
+  
+  body.dark-mode .theme-toggle:hover {
+    background-color: #505050;
+  }
+  
+  /* Dark mode styles */
+body.dark-mode {
+  background-color: #2D2D2D; /* Dark background */
+}
+
+body.dark-mode .card,
+body.dark-mode input,
+body.dark-mode .button,
+body.dark-mode .checkbox-container,
+body.dark-mode .checkmark {
+  background-color: #3B3B3B; /* Dark elements background */
+  color: #E0E5EC; /* Light text color for dark mode */
+  box-shadow: 8px 8px 15px #1f1f1f, /* Outer shadow for dark mode */
+              -8px -8px 15px #555; /* Inner shadow for dark mode */
+}
+
+body.dark-mode .checkmark {
+  border-color: #E0E5EC;
+}
+
+body.dark-mode .button:hover {
+  background-color: #505050; /* Slightly lighter on hover in dark mode */
+}
+
+body.dark-mode h1,
+body.dark-mode h5,
+body.dark-mode a,
+body.dark-mode p,
+body.dark-mode .forget,
+body.dark-mode ::placeholder {
+  color: #E0E5EC; /* Ensuring all text is off-white in dark mode */
+}
+
+/* Toggle button styles (same as before) */
+/* ... [existing .theme-toggle styles] ... */
+
+body.dark-mode .theme-toggle {
+  background-color: #3B3B3B;
+  color: #E0E5EC;
+  box-shadow: 8px 8px 15px #1f1f1f,
+              -8px -8px 15px #555;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #505050;
+}

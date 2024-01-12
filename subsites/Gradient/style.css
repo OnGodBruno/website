@@ -1,0 +1,95 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Menu Icon */
+#menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Animated Menu */
+#animated-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.5s ease;
+}
+
+#animated-menu ul {
+    list-style-type: none;
+    padding: 50px 0;
+}
+
+#animated-menu ul li {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+#animated-menu ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#animated-menu ul li a:hover {
+    color: #ff758c;
+}
+
+/* Dynamic Background */
+#dynamic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #6D5ACF, #FF758C, #FF7EB3);
+    background-size: 400% 400%;
+    animation: animatedGradient 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes animatedGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Content Styles */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+
+/* Scroll Indicator */
+#scrollIndicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #ff758c;
+    z-index: 1000;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Professional Website</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        header { background: url('background.jpg') no-repeat center center/cover; color: #fff; padding: 40px 20px; text-align: center; height: 80vh; }
+        header h1 { font-size: 4em; margin-top: 30vh; }
+        nav { display: flex; justify-content: center; }
+        nav a { color: #fff; text-decoration: none; padding: 0 15px; }
+        nav a:hover { color: #ddd; }
+        .section { padding: 50px 20px; text-align: center; }
+        .section:nth-child(even) { background: #f4f4f4; }
+        .section:nth-child(odd) { background: #fff; }
+        .services, .portfolio, .team, .blog { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        footer { background: #333; color: #fff; text-align: center; padding: 20px 0; }
+        @media (max-width: 768px) {
+            .services, .portfolio, .team, .blog, .contact-form { grid-template-columns: 1fr; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        button:hover, nav a:hover {
+            animation: pulse 0.7s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .portfolio img, .team img {
+            max-width: 100%;
+            max-height: 400px; /* Adjust this value as needed */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Adjusting Image Containers for Better Layout */
+        .portfolio div, .team div {
+            text-align: center;
+        }
+
+        .portfolio p, .team p {
+            margin-top: 10px;
+        }
+
+        .section#about {
+            padding: 100px 20px; /* Increased padding */
+        }
+
+        .about-content h3 {
+            font-size: 3em; /* Larger font size for headline */
+            margin-bottom: 30px; /* Increased spacing below headline */
+        }
+
+        .text-wrapper {
+            max-width: 600px; /* Narrower text width for better readability */
+            margin: 0 auto; /* Center the text wrapper */
+        }
+
+        .text-wrapper p {
+            font-size: 1.2em;
+            line-height: 1.8; /* Improved line spacing for readability */
+            color: #666;
+            margin-bottom: 25px; /* Increased spacing between paragraphs */
+        }
+
+        body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9; /* Soft background color */
+}
+
+header {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    height: 80vh;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eaeaea; /* Subtle border */
+}
+
+.section:nth-child(odd) {
+    background: #fff;
+}
+
+.section:nth-child(even) {
+    background: #f4f4f4;
+}
+
+.services div, .portfolio div, .team div, .blog div {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadows for content blocks */
+    padding: 20px;
+    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.services div:hover, .portfolio div:hover, .team div:hover, .blog div:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Georgia', serif; /* More engaging typography */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Modern Site</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#team">Team</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div><h3>Web Development</h3><p>Creating responsive, modern websites.</p></div>
+            <div><h3>Graphic Design</h3><p>Innovative designs for your brand.</p></div>
+            <div><h3>SEO Optimization</h3><p>Enhance your website's visibility.</p></div>
+        </div>
+    </section>
+    <section id="portfolio" class="section">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio">
+            <div><img src="project1.png" alt="Project 1"><p>Project Description</p></div>
+            <div><img src="project2.png" alt="Project 2"><p>Project Description</p></div>
+            <div><img src="project3.png" alt="Project 3"><p>Project Description</p></div>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <h3>A Journey of Innovation and Excellence</h3>
+            <div class="text-wrapper">
+                <p>Since our inception, we have been at the forefront of the digital revolution, redefining the standards of professional web services. Our journey began with a simple, yet profound mission: to empower businesses through cutting-edge web solutions. Today, we stand as industry leaders, thanks to our relentless pursuit of excellence and innovation.</p>
+                <p>Our team comprises visionary thinkers, creative wizards, and technical maestros, all united by a common passion for digital creativity. From bespoke website designs to transformative digital marketing strategies, we offer a spectrum of services that are tailored to the unique needs of each client. We don't just build websites; we craft digital experiences that resonate with your audience and drive business growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section">
+        <h2>Latest News</h2>
+        <div class="blog">
+            <div><h4>Blog Post 1</h4><p>Summary of the post.</p></div>
+            <div><h4>Blog Post 2</h4><p>Summary of the post.</p></div>
+            <div><h4>Blog Post 3</h4><p>Summary of the post.</p></div>
+        </div>
+    </section>
+    <footer>
+        © 2023 Bruno Zoller. All rights reserved.
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.section', { 
+            duration: 1000,
+            distance: '50px',
+            easing: 'ease-in-out',
+            origin: 'bottom',
+            interval: 200
+        });
+
+    </script>
+</body>
+</html>

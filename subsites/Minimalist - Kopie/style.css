@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Full Viewport Coverage for the Div */
+.gradient-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: gradient-shift 15s ease infinite;
+  background: linear-gradient(45deg, #3494E6, #EC6EAD, #dc2430, #7b4397);
+  background-size: 400% 400%;
+}
+
+
+
+/* Keyframes for Gradient Animation */
+@keyframes gradient-shift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+body, html {
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  /* ... other styles ... */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.rounded-rectangle {
+  width: 1500px; /* Fixed width, adjust as needed */
+  height: 900px; /* Fixed height, adjust as needed */
+  display: flex;
+  border-radius: 50px; /* Rounded corners */
+  overflow: hidden; /* Ensures the child elements conform to the border radius */
+}
+
+
+.section {
+  flex: 1; /* Equal width for each section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-section {
+  position: relative;
+  background-color: white;
+}
+
+.glass-section {
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent white for glassmorphism */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+}
+
+/* For the second glass section, reduce the opacity further */
+.glass-section:last-child {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-section {
+  flex: 0 0 22%; /* White section taking up 22% of the width */
+}
+
+/* Adjust the flex basis of the glass sections */
+.glass-section:not(:last-child) {
+  flex: 0 0 44.64%; /* Middle section width adjusted */
+}
+
+.glass-section:last-child {
+  flex: 0 0 33.36%; /* Right section width adjusted */
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.5);
+  background-color: white;
+  border-radius: 30px; /* Further increased rounding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 215px; /* Fixed width */
+  height: 70px; /* Slightly reduced height */
+  position: absolute;
+  top: 40px; /* Slightly lower position */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 1.2em; /* Bigger font size */
+  font-weight: bold;
+}
+
+.occupation {
+  font-size: smaller;
+}
+
+.gradient-card {
+  border-radius: 20px; /* Rounding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  width: 200px; /* Width same as the profile card */
+  height: 30px; /* Decreased height */
+  position: absolute;
+  top: 170px; /* Further down */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  padding-left: 30px; /* Add padding to move content to the right */
+  animation: gradient-shift 15s ease infinite;
+  background: linear-gradient(45deg, #3494E6, #EC6EAD, #dc2430, #7b4397);
+  background-size: 400% 400%;
+}
+
+.gradient-card-text {
+  color: white; /* White text color */
+  font-size: 1.2em; /* Same size as the username */
+  font-weight: normal; /* Remove boldness */
+  margin-left: 10px; /* Space between icon and text */
+  display: inline; /* Inline display for proper alignment */
+}
+
+.fas.fa-user {
+  color: white; /* White icon color */
+  font-size: 1.2em; /* Adjust size as needed */
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px; /* Same width as the gradient card */
+  height: 30px; /* Height of each category */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 15px; /* Align with the gradient card */
+  color: gray; /* Gray color for icons and text */
+  font-size: 1.2em; /* Same size as the gradient card text */
+}
+
+.category, .gradient-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px; /* Same width for consistency */
+  height: 30px; /* Height of each category */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Set a fixed width for icons to align them */
+.category i, .gradient-card i {
+  width: 25px; /* Fixed width for icons */
+  text-align: center; /* Center the icon in its allocated space */
+  color: gray; /* Gray color for category icons */
+}
+
+.category-text {
+  font-size: 1em; /* Standard font size */
+  font-weight: normal; /* Standard font weight */
+  margin-left: 10px; /* Space between icon and text */
+  display: inline; /* Inline display for proper alignment */
+}
+
+.gradient-card-text {
+  font-size: 1.2em; /* Standard font size */
+  font-weight: normal; /* Standard font weight */
+  margin-left: 10px; /* Space between icon and text */
+  display: inline; /* Inline display for proper alignment */
+}
+
+/* Set the color for the 'Profile' icon separately, as it's active */
+.gradient-card i {
+  color: white; /* White color for active (Profile) icon */
+}
+
+/* Position each category below the previous one */
+.category:nth-child(3) { top: 240px; }
+.category:nth-child(4) { top: 280px; }
+.category:nth-child(5) { top: 320px; }
+.category:nth-child(6) { top: 360px; }
+
+
+.middle-section-content {
+  display: flex;
+  align-items: center;
+  justify-content: start; /* Align items to the start */
+  width: 100%;
+  padding: 20px; /* Adjust padding as needed */
+  position: absolute;
+  top: 0;
+}
+
+.headline {
+  font-family: 'Montserrat', sans-serif; /* Using Montserrat */
+  font-size: 3em;
+  font-weight: bold;
+  color: #404040;
+  margin: 0;
+  margin-right: 20px; /* Add some margin to the right of the title */
+  margin-left: 0px; /* Add some margin to the right of the title */
+
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 13px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 1em;
+  margin-left: 10px;
+  background-color: transparent; /* Set background to transparent */
+  color: inherit; /* Ensure the text color matches the surrounding text */
+}
+
+.search-bar i {
+  color: gray;
+}
+
+.center {
+  text-align: center;
+}
+
+.middle-section-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: flex-start; /* Align items to the start */
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 25px;
+}
+
+.header-container {
+  display: flex; /* New container to keep elements side by side */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Take full width of parent */
+  margin-bottom: 20px; /* Spacing below the header */
+}
+
+
+.expanded-profile-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px; /* Spacing below the search bar */
+  width: 400px; /* Fixed width */
+  height: 140px; /* Slightly reduced height */
+}
+
+.large-user-image {
+  width: 120px; /* Larger image size */
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.large-username {
+  font-size: 1.2em; /* Bigger font size */
+  font-weight: bold;
+  margin-bottom: 5px; /* Spacing between details */
+}
+
+.user-email, .user-fullname, .user-birthdate {
+  font-size: 1.1em; /* Bigger font size */
+  margin-bottom: 5px; /* Spacing between details */
+}
+
+
+
+.card-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the buttons */
+  margin-top: 30px; /* Space above the button container */
+  width: 400px; /* Same width as the expanded profile card */
+}
+
+.card-button {
+  width: 80%; /* Full width of the container */
+  margin-top: 15px; /* Spacing between buttons */
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: black;
+  font-size: 1.2em;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-button:hover {
+  transform: scale(1.05);
+}
+
+/* Glassmorphic style */
+.card-button.glass {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Red style for 'Delete Account' button */
+.card-button.danger {
+  width: auto;
+  color: white;
+  font-weight: bold;
+  background: rgba(255, 0, 0, 0.7);
+}
+
+.glass-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align elements to the left */
+  width: 100%; /* Ensure full width */
+  margin-bottom: 20px;
+}
+
+.chat-header .fas {
+  font-size: 1.5em;
+  margin-right: 10px; /* Add some space between icon and image */
+  cursor: pointer;
+}
+
+.user-image-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px; /* Space between image and name */
+}
+
+.chat-partner-name {
+  font-weight: bold;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Push messages to the bottom */
+  overflow-y: auto;
+  width: 100%; /* Ensure full width */
+}
+
+
+
+.chat-message {
+  max-width: 70%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  width: fit-content; /* Adjust message width based on content */
+  position: relative; /* For timestamp positioning */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.sent {
+  align-self: flex-end;
+  margin-right: 16%; /* Offset from the right */
+  background: rgba(150, 255, 150, 0.5);
+}
+
+.received {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: grey;
+  position: absolute;
+  bottom: 5px; /* Position at the bottom of the message */
+  right: 10px; /* Right for sent, left for received */
+}
+
+.received .timestamp {
+  right: auto;
+  left: 10px;
+}
+
+/* Optional: Scrollbar styles */
+.chat-box::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.glass-section2 {
+  flex: 1; /* Equal width for each section */
+  display: flex;
+  align-items: center;
+  justify-content: top;
+}
+
+.message-header {
+  font-size: 0.9em;
+  right: auto;
+  color: grey;
+}
+
+.write-bar {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 13px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.write-bar input {
+  border: none;
+  outline: none;
+  font-size: 1em;
+  margin-left: 10px;
+  background-color: transparent; /* Set background to transparent */
+  color: inherit; /* Ensure the text color matches the surrounding text */
+}
+
+.write-bar i {
+  color: gray;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+
+    <div class="container">
+        <div class="card">
+          <form>
+            <h1>Login Page</h1>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">    
+            <a class="button" href="#">Login</a>
+            <p><a         class="forget" href="#">Forgot account?</a></p>
+            <h5>create account?<a href="#"> Create.</a></h5>
+          </form>
+          </div>
+        </div>
+
+        <script>
+            const toggleButton = document.getElementById('theme-toggle');
+        
+            toggleButton.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                this.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+            });
+        </script>
+</body>
+
+</html>

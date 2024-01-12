@@ -1,0 +1,134 @@
+:root {
+    --bg1: url("../images/site1.jpg");
+    --bg2: url("../images/site2.jpg");
+    --bg3: url("../images/site3.jpg");
+    --bg4: url("../images/site4.jpg");
+    --bg5: url("../images/site5.jpg");
+}
+
+
+
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+    max-width: 1100px;
+    height: 50vh;
+    max-height: 900px;
+    margin: 0 auto;
+}
+
+.box1 {
+    background: var(--bg1);
+}
+
+.box2 {
+    background: var(--bg2);
+}
+
+.box3 {
+    background: var(--bg3);
+}
+
+.box4 {
+    background: var(--bg4);
+}
+
+.box5 {
+    background: var(--bg5);
+}
+
+
+
+.box {
+    
+    filter: drop-shadow(0px 10px 5px gray);
+    font-family: 'Roboto', sans-serif;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+
+
+    width: 25%;
+    height: 500px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, width 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+    .overlay {
+        opacity: 0;
+    }
+
+    &.closed {
+        width: 5%;
+
+        .overlay {
+            opacity: 1;
+        }
+    }
+
+    &.expanded {
+        width: 85%;
+    }
+
+    
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.info-text {
+    position: absolute;
+    bottom: 10%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    font-size: 18px; /* Adjust as needed */
+    z-index: 3; /* Make sure it's above the overlay */
+}
+.box.expanded .info-text {
+    opacity: 1;
+    visibility: visible; /* Make visible when expanded */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.info-text a {
+    white-space: nowrap;
+    text-decoration: none; /* Removes underline */
+    color: #f2f2f2;; /* A standard link blue color */
+    font-weight: 700; /* Makes the font bold */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.info-text a:hover {
+    color: #a69f91; /* Darker blue on hover */
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+.gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%; /* Adjust the height as needed */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+    z-index: 2; /* Below the text but above the image */
+}

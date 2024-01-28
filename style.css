@@ -232,7 +232,7 @@ h1, .text-hover, h2, .project {
     transition: transform 0.3s ease, text-shadow 0.3s ease; /* Transition for scaling and shadow */
 }
 
-h1:hover, .text-hover:hover, h2:hover {
+h1:hover, h2:hover {
     transform: scale(1.1); /* Increase text size */
 }
 
@@ -244,7 +244,7 @@ h1:hover, .text-hover:hover, h2:hover {
 }
 
 .html-projects-heading h2 {
-    font-size: 4em;
+    font-size: 6em;
     font-weight: bold;
     font-family: 'Georgia', serif;
     color: #808080; /* Gray */
@@ -253,7 +253,16 @@ h1:hover, .text-hover:hover, h2:hover {
 }
 
 .html-projects-heading h2:hover {
-    transform: scale(1.1); /* Slight increase in size on hover */
+    transform: translateY(-5px); /* Slightly moves the text up */
+    text-shadow: 
+        1.5px 1.5px 1.5px rgba(0, 0, 0, 0.4),  /* Subtle initial shadow */
+        3px 3px 3px rgba(0, 0, 0, 0.3),  /* Additional layer */
+        4.5px 4.5px 4.5px rgba(0, 0, 0, 0.2),  /* Further depth */
+        6px 6px 6px rgba(0, 0, 0, 0.1);  /* Outermost shadow layer */
+}
+
+.html-projects-heading h2:hover {
+    transform: scale(1.05); /* Slight increase in size on hover */
 }
 
 .click-preview {

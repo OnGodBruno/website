@@ -153,27 +153,39 @@ footer {
 }
 
 .project-image {
-    flex: 0 0 150px; /* Fixed width for the image container */
-    height: 150px; /* Ensuring it's a square and increasing height */
+    flex: 0 0 200px; /* Fixed width */
+    height: 200px; /* Maintain a square shape */
+    background-color: white; /* White frame */
+    padding: 15px; /* Frame effect */
+    box-shadow: 0px 10px 5px gray; /* Shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
 }
 
-.project {
-    display: flex;
-    align-items: center;
-    background-color: #f4f3f2;
-    padding: 15px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    border-radius: 5px;
-    width: 90%;
+.project-image:hover {
+    transform: scale(1.1); /* Scales up on hover */
+    box-shadow: 0px 15px 10px gray; /* Optional: enhances shadow effect on hover */
 }
 
 .project-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* This will make sure the image covers the area */
+    max-width: 100%; /* Ensures image does not exceed container */
+    max-height: 100%; /* Keeps image height within container */
+    object-fit: cover; /* Ensures image covers the area properly */
 }
+
+.square {
+    width: 250px; /* Größe der Quadrate */
+    height: 250px;
+    background-color: white;
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.3); /* Innen-Schatten */
+    border-radius: 40px; /* Abgerundete Ecken */
+    position: relative; /* Für die Positionierung des inneren Quadrats */
+}
+
+
+
 
 .project-content {
     flex-grow: 1;
@@ -220,7 +232,7 @@ h1, .text-hover, h2, .project {
     transition: transform 0.3s ease, text-shadow 0.3s ease; /* Transition for scaling and shadow */
 }
 
-h1:hover, .text-hover:hover, h2:hover, .project:hover {
+h1:hover, .text-hover:hover, h2:hover {
     transform: scale(1.1); /* Increase text size */
 }
 
@@ -303,15 +315,63 @@ h1:hover, .text-hover:hover, h2:hover, .project:hover {
     transition: transform 0.3s ease;
 }
 
+
+.psquare {
+    width: 250px; /* Größe der Quadrate */
+    height: 250px;
+    min-width: 250px;
+    background-color: white;
+    box-shadow: inset 0 8px 11px rgba(0, 0, 0, 0.3); /* Innen-Schatten */
+    border-radius: 40px; /* Abgerundete Ecken */
+    position: relative; /* Für die Positionierung des inneren Quadrats */
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusts the spacing of items inside */
+    background-color: transparent;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 51px;
+    width: 90%;
+    position: relative; /* Needed for absolute positioning of the button */
+}
+
+
+
+
+.inner-psquare {
+    background-size: cover;
+    width: 150px; /* Größe des inneren Quadrats */
+    height: 150px;
+    background-color: #FFFFFF; /* Hintergrundfarbe des inneren Quadrats */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Zentriert das innere Quadrat */
+    border-radius: 20px; /* Abgerundete Ecken für das innere Quadrat */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Außenschatten */
+    transition: transform 0.3s ease;
+}
+
 .inner-square:hover {
     transform: translate(-50%, -50%) scale(1.5);
+}
+
+.project:hover .inner-psquare {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.project:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
 }
 
 p {
     position: relative; /* Ermöglicht die Positionierung des Pseudo-Elements */
     font: bold 48px 'Futura';
-
-    transition: transform 0.3s ease; /* Glatte Transformation beim Hover */
 }
 
 p:before {
@@ -330,9 +390,6 @@ p:before {
     transition: opacity 0.3s ease;
 }
 
-p:hover {
-    transform: scale(1.1); /* Vergrößert den Text beim Hover */
-}
 
 p:hover:before {
     opacity: 1; /* Macht den Hintergrundtext sichtbar beim Hover */

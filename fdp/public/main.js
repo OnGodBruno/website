@@ -16,7 +16,6 @@ async function askQuestion() {
   
   questionInput.value = ''; // Clear input field
 
-  import fetch from "node-fetch";
   // Show typing indicator
   const typingIndicator = document.createElement('div');
   typingIndicator.className = 'typing-indicator';

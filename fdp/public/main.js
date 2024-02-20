@@ -24,7 +24,7 @@ async function askQuestion() {
   scrollToBottom();
 
   try {
-    const response = await fetch('http://localhost:3000/ask', {
+    const response = await fetch('http://193.196.53.153:3000/ask', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

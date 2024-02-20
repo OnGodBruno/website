@@ -1,0 +1,141 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A modern, clean sans-serif font */
+    background-color: #ffffff; /* A light background, considering accessibility and readability */
+    font-weight: bold;
+  }
+  
+  .chat-header {
+    background-color: #ffed00; /* A shade of blue similar to the FDP's branding */
+    color: #e5007d;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 32px;
+    
+  }
+  ::placeholder {
+    color: #ffed00;
+    opacity: 1; /* Firefox */
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  #chat-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .responses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f5f5f5; /* Slightly off-white background for the chat area */
+    }
+  
+  .input-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e5007d;
+  }
+  
+  input[type="text"] {
+    width: 80%;
+    padding: 20px;
+    outline: none;
+    background-color: #e5007d;
+    border:none;
+    color: #ffed00;
+    font-weight: bold;
+  }
+  
+  button {
+    padding: 20px 20px;
+    border: none;
+    background-color: #ffed00;
+    color: #e5007d;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #ffed00;
+  }
+  
+  /* Adjustments for larger screens can be added here if necessary */
+  @media (min-width: 600px) {
+    .input-area {
+      width: 90%;
+      margin: auto;
+    }
+  }
+  
+  .responses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+    /* General message styling */
+    .message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+  }
+  
+  /* Specific styling for user messages */
+  .user {
+    align-self: flex-end;
+    background-color: #009ee3; /* A bright yellow for user messages, resembling the FDP's accent color */
+    color: white; /* Ensures readability against the yellow background */
+  }
+  
+  
+  .bot {
+    align-self: flex-start;
+    background-color: #e5007d; /* A blue shade for bot messages, complementing the FDP color scheme */
+    color: white;
+  }
+  
+  .typing-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+    padding: 5px;
+  }
+  
+  .typing-indicator .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #666;
+    border-radius: 50%;
+    animation: typing 1.4s infinite both;
+    background-color: #e5007d;
+  }
+  
+  .typing-indicator .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .typing-indicator .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .typing-indicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes typing {
+    0%, 40%, 100% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-6px);
+    }
+  }
+  

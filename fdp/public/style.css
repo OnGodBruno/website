@@ -34,7 +34,6 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #f5f5f5; /* Slightly off-white background for the chat area */
     }
   
   .input-area {

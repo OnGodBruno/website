@@ -24,7 +24,7 @@ async function askQuestion() {
   scrollToBottom();
 
   try {
-    const response = await fetch('http://193.26.156.106:3000/ask', {
+    const response = await fetch('http://germany.pauledevelopment.com:3344/ask', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

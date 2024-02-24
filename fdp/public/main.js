@@ -24,7 +24,7 @@ async function askQuestion() {
   scrollToBottom();
 
   try {
-    const response = await fetch('https://germany.pauledevelopment.com:3344/ask', {
+    const response = await fetch('https://server.mentis.dev:3344/ask', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MCI CALCULATOR</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -9,8 +11,13 @@
             <li><a class="active" href="#home">C.1 LAYOUT 1</a></li>
             <li><a href="index2.html">C.2 LAYOUT 2</a></li>
           </ul>
+          <div class="grid-container">
+            <div id="task">
+                <span id="number1"></span> * <span id="number2"></span> =
+            </div>
         <div class = "grid-container">
             <div class = "calculator-grid ">
+            <textarea style="background-color: #D3BBFF;" type="text" id = "preview" placeholder="0"></textarea>
             <textarea type="text" id = "inputtext" placeholder="0"></textarea>
                 <button>1</button>
                 <button>2</button>
@@ -23,10 +30,11 @@
                 <button>7</button>
                 <button>8</button>
                 <button>9</button>
-                <button>=</button>
-                <button style="grid-column: span 4;">C</button>
+                <button>0</button>
+                <button style="grid-column: span 4;">=</button>
             </div>
         </div>
+         <div id="result-box"></div>
     </body>
     <script src="script.js"></script>
 </html>

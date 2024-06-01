@@ -1,9 +1,15 @@
+const preview = document.getElementById('preview');
 const input = document.getElementById('inputtext');
 const buttons = document.querySelectorAll('button');
 const buttonPositions = {};
 let lastButtonPosition = null;
 let lastPressTime = null;
 let keyWidth = null; // Assume a fixed width for simplicity
+
+let counter = 1;
+let maxCounter = 20;
+let str = Math.round(Math.random()*9) + "*" + Math.round(Math.random(9)*9);
+preview.value = "Task " + counter + "/" + maxCounter + ": " + str;
 
 function calculate(expression) {
     try {
@@ -14,15 +20,20 @@ function calculate(expression) {
 }
 
 function operation(buttonValue, button) {
-    if (buttonValue === 'C') {
-        input.value = "";
-    }
-    else if (buttonValue === '=') {
-        input.value = calculate(input.value);
+    if (buttonValue === '=' && str == '') {
+        if (counter < maxCounter) {
+            counter++;
+            str = Math.round(Math.random()*9) + "*" + Math.round(Math.random(9)*9);
+            preview.value = "Task " + counter + "/" + maxCounter + ": " + str;
+            input.value = "";
+        }
+        else {
+            preview.value = "Task Done!"
+        }
     } else {
-        if ((buttonValue != '*' || (!input.value.endsWith("*") && !input.value.endsWith("."))) && 
-            (buttonValue != '.' || (!input.value.endsWith("*") && !input.value.endsWith(".")))) {
+        if (str.startsWith(buttonValue)) {
             input.value += buttonValue;
+            str = str.substring(1);
         }
     }
     

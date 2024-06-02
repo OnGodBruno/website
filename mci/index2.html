@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MCI CALCULATOR</title>
         <link rel="stylesheet" href="style2.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-statistics@7.4.0/dist/simple-statistics.min.js"></script>
     </head>
     <body>
         <ul>
@@ -17,8 +19,8 @@
             </div>
         <div class = "grid-container">
             <div class = "calculator-grid ">
-            <textarea style="grid-column: span 2; background-color: #D3BBFF;" type="text" id = "preview" placeholder="0"></textarea>
-            <textarea type="text" id = "inputtext" placeholder="0"></textarea>
+            <textarea style="background-color: #D3BBFF;" type="text" id = "preview" placeholder="0"></textarea>
+            <textarea style="grid-column: span 2;" type="text" id = "inputtext" placeholder="0"></textarea>
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
@@ -29,13 +31,15 @@
                 <button>8</button>
                 <button>9</button>
                 <button>0</button>
-                <button>*</button>
                 <button>.</button>
-                <button>=</button>
+                <button>*</button>
+                <button style="grid-column: span 2;">=</button>
             </div>
-            <div id="result-box"></div>
         </div>
-       
+         <div id="result-box">
+            <p>RESULTS</p>
+            <canvas id="rittsModelChart" width="800" height="400"></canvas>
+        </div>
     </body>
     <script src="script.js"></script>
 </html>

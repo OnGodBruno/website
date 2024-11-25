@@ -1,0 +1,13 @@
+{ "manifestFiles" : [ "runner.data",
+"runner.js",
+"runner.wasm",
+"audio-worklet.js",
+"d4827a9c-5467-456a-9c90-76048aa97b7e-video.mp4",
+"game.unx",
+"options.ini" ], "manifestFilesMD5" : [ "8671e232981d7de31040c53dad3018f7",
+"6fa6eb9e89ec21c79efd314b0247309d",
+"1a8d25fc3f59533ef8848326f97473ac",
+"e8f1e8db8cf996f8715a6f2164c2e44e",
+"f0a70fee1e9375a30dc3eb0f40601318",
+"f3ded2dfb4a503aa203331a23d10dfc1",
+"585214623b669175a702fed30de7d21d" ], "mainJS" : "runner.js", "unx": "game.unx", "index": "index.html", "runner": {"version": "2024.1100.0.707", "yyc": false}}
